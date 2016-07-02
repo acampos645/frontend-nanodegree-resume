@@ -10,7 +10,6 @@ var bio = {
 	"welcomeMessage" : "Welcome to my brand new portfolio site!  Starving developer here looking for a first project.",
 	"skills" : ["Debugging", "Sciencing", "Javascripting", "Teaching", "Technology Integration"],
 	"biopic": "http://fall11marinecology.providence.wikispaces.net/file/view/sea-otter.jpg/274922548/267x266/sea-otter.jpg"
-	// display : function
 }
 
 var education = {
@@ -50,7 +49,6 @@ var education = {
 		"dates" : "2015-2016",
 		"url" : "www.udacity.com",
 	}]
-	// display : function;
 }
 
 var work = {
@@ -76,7 +74,6 @@ var work = {
 		"dates" : "Aug 2010 - Jun 2012",
 		"description" : "Heart stem cell research group"
 	}],
-	// display: function
 }
 
 var projects = {
@@ -99,9 +96,6 @@ var projects = {
 		"description" : "Collected and displayed various picture of cute cats",
 		"images" : ["http://b50ym1n8ryw31pmkr4671ui1c64.wpengine.netdna-cdn.com/wildlifepromise/files/2011/03/CaliforniaSeaOtter-300x200.jpg", "http://www.himalayanotternetwork.org/wp-content/uploads/2014/08/HOM-site-design-3-300x200.jpg"]
 	}]
-
-
-	// "display" : function
 }
 
 $("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
@@ -110,14 +104,8 @@ $("#header").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
 $("#header").append(HTMLemail.replace("%data%", bio.contacts.email));
 $("#header").append(HTMLgithub.replace("%data%", bio.contacts.github));
 $("#header").append(HTMLlocation.replace("%data%", bio.contacts.location));
-
-
-
-
-
 $("#header").append(HTMLwelcomeMsg.replace("%data%",bio.welcomeMessage))
 $("#header").append(HTMLbioPic.replace("%data%", bio.biopic))
-
 $("#header").append(HTMLskillsStart);
 
 if (bio.skills.length >= 1) {
@@ -151,15 +139,17 @@ function displayWork() {
 	}
 }
 
-function locationizer(work) {
-	var locations = [];
-	for (job in work.jobs) {
-		locations.push(work.jobs[job].location);
-	}
-	return locations;
-}
-
 displayWork();
+$("#main").append(internationalizeButton);
+$("#mapDiv").append(googleMap);
+
+// function locationizer(work) {
+// 	var locations = [];
+// 	for (job in work.jobs) {
+// 		locations.push(work.jobs[job].location);
+// 	}
+// 	return locations;
+// }
 
 function inName(name) {
 	name = name.trim.split(" ");
@@ -169,6 +159,3 @@ function inName(name) {
 	return name[0] + " " + name[1];
 }
 
-$("#main").append(internationalizeButton);
-
-$("#mapDiv").append(googleMap);
