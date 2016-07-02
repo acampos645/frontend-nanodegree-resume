@@ -5,7 +5,7 @@ var bio = {
 		"mobile" : "720-688-6963",
 		"email" : "acampos645@gmail.com",
 		"github" : "http://github.com/acampos645",
-		"location" : "Denver, CO, US"
+		"location" : "Dallas, TX, US"
 	},
 	"welcomeMessage" : "Welcome to my brand new portfolio site!  Starving developer here looking for a first project.",
 	"skills" : ["Debugging", "Sciencing", "Javascripting", "Teaching", "Technology Integration"],
@@ -20,14 +20,16 @@ var education = {
 		"degree" : "B.Sc.",
 		"majors" : ["Biology"],
 		"dates" : "2005-2009",
-		"url" : "web.mit.edu"
+		"url" : "web.mit.edu",
+		"location" : "Cambridge, MA"
 	}, 
 	{
 		"name" : "Columbia University",
 		"degree" : "MA",
 		"majors" : ["Education Technology"],
 		"dates" : "2012-2014",
-		"url" : "www.columbia.edu"
+		"url" : "www.columbia.edu",
+		"location" : "New York City, NY"
 	}],
 	"onlineCourses" : [
 	{
