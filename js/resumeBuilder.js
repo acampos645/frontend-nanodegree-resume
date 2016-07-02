@@ -7,7 +7,7 @@ var bio = {
 		"github" : "http://github.com/acampos645",
 		"location" : "Dallas, TX, US"
 	},
-	"welcomeMessage" : "Welcome to my brand new portfolio site!  Starving developer here looking for a first project.",
+	"welcomeMessage" : "<br>Welcome to my brand new portfolio site!  Starving developer here looking for a first project.",
 	"skills" : ["Debugging", "Sciencing", "Javascripting", "Teaching", "Technology Integration"],
 	"biopic": "http://fall11marinecology.providence.wikispaces.net/file/view/sea-otter.jpg/274922548/267x266/sea-otter.jpg"
 }

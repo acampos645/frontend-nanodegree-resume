@@ -225,4 +225,5 @@ span {
 .contact {
   display: inline;
   text-align: left;
+  align-content: middle;
 }
