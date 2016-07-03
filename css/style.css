@@ -136,7 +136,7 @@ a {
 .flex-box {
     display: -webkit-flex;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 10px;
@@ -145,6 +145,7 @@ a {
 .flex-item {
     list-style: none;
     padding-left: 0px;
+    display: block;
 }
 
 .center-content {

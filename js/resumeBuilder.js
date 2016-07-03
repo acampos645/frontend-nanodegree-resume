@@ -21,7 +21,7 @@ var bio = {
         $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
         $("#header").append(HTMLskillsStart);
         for (var skill = 0; skill<bio.skills.length; skill++)	{
-	       $("#header").append(HTMLskills.replace("%data%", bio.skills[skill]));
+	       $("#skills").append(HTMLskills.replace("%data%", bio.skills[skill]));
         }
         $("#footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
         $("#footerContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
