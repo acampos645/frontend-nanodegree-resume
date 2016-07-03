@@ -20,11 +20,13 @@ var bio = {
         $("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
         $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
         $("#header").append(HTMLskillsStart);
-        if (bio.skills.length >= 1) {
-            for (skill in bio.skills) {
-                $("#header").append(HTMLskills.replace("%data%", bio.skills[skill]));
-            }
+        for (var skill = 0; skill<bio.skills.length; skill++)	{
+	       $("#header").append(HTMLskills.replace("%data%", bio.skills[skill]));
         }
+        $("#footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+        $("#footerContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
+        $("#footerContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
+        $("#footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
     }
 };
 var education = {
@@ -60,7 +62,7 @@ var education = {
         url: "https://www.udacity.com/course/intro-to-inferential-statistics--ud201"
     }],
     display: function() {
-        for (school in education.schools) {
+        for (var school = 0; school<education.schools.length; school++) {
             var schoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
             var schoolDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
             $("#education").append(HTMLschoolStart);
@@ -70,7 +72,7 @@ var education = {
             $(".education-entry:last").append(HTMLschoolMajor.replace("%data%", education.schools[school].majors));
         }
         $("#education").append(HTMLonlineClasses);
-        for (course in education.onlineCourses) {
+        for (var course = 0; course<education.onlineCourses.length; course++) {
             $("#education").append(HTMLschoolStart);
             var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
             formattedTitle = formattedTitle.replace("#", education.onlineCourses[course].url);
@@ -103,7 +105,7 @@ var work = {
         "description": "Heart stem cell research group. Designed and executed various experiments."
     }],
     display: function() {
-        for (job in work.jobs) {
+        for (var job=0; job<work.jobs.length; job++) {
             $("#workExperience").append(HTMLworkStart);
             $(".work-entry:last").append(HTMLworkEmployer.replace("%data%", work.jobs[job].employer) + HTMLworkTitle.replace("%data%", work.jobs[job].title));
             $(".work-entry:last").append(HTMLworkLocation.replace("%data%", work.jobs[job].location));
@@ -131,13 +133,14 @@ var projects = {
         "images": ["http://b50ym1n8ryw31pmkr4671ui1c64.wpengine.netdna-cdn.com/wildlifepromise/files/2011/03/CaliforniaSeaOtter-300x200.jpg", "http://www.himalayanotternetwork.org/wp-content/uploads/2014/08/HOM-site-design-3-300x200.jpg"]
     }],
     display: function() {
-        for (project in projects.projects) {
+        for (var project=0; project<projects.projects.length; project++) {
             $("#projects").append(HTMLprojectStart);
             $(".project-entry:last").append(HTMLprojectTitle.replace("%data%", projects.projects[project].title));
             $(".project-entry:last").append(HTMLprojectDates.replace("%data%", projects.projects[project].dates));
             $(".project-entry:last").append(HTMLprojectDescription.replace("%data%", projects.projects[project].description));
+            
             if (projects.projects[project].images.length > 0) {
-                for (image in projects.projects[project].images) {
+                for (var image = 0; image<projects.projects[project].images.length; image++) {
                     $(".project-entry:last").append(HTMLprojectImage.replace("%data%", projects.projects[project].images[image]));
                 }
             }

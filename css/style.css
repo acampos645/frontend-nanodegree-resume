@@ -180,13 +180,13 @@ span {
 @media only screen and (max-width: 1024px) {
     #lets-connect {
         margin-top: 5%;
-    };
+    }
 }
 
 @media only screen and (max-width:900px) {
     .biopic {
         width: 175px;
-    };
+    }
 }
 
 @media only screen and (max-width: 750px) {
@@ -200,7 +200,7 @@ span {
 
     .welcome-message {
         display: none;
-    };
+    }
 }
 
 #map {
@@ -219,11 +219,11 @@ span {
     #skills-h3,
   .biopic {
         display: block;
-    };
+    }
 }
 
 .contact {
     display: inline;
     text-align: left;
-    align-content: middle;
+    align-content: center;
 }
